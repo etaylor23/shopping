@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Stock Take</title>
+
+		<link rel="stylesheet" href="css/app.css" />
+
+		<script type="text/javascript" src="lib/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="lib/jquery-ui-1.10.4.custom.js"></script>
+		<script type="text/javascript" src="lib/underscore-1.6.0.js"></script>
+		<script type="text/javascript" src="lib/backbone-1.1.2.js"></script>
+
+	    <script src="bower_components/modernizr/modernizr.js"></script>
+
+
+	</head>
+
+	<body>
+
+	<div class="nav-controls">
+		<div class="my-stocktake">
+    		<a href="/my-stock-take">My Stocktake</a>
+    	</div>
+    	<div>
+    		<a href="/logout">Logout</a>
+    	</div>
+	</div>
+
+
+
+		<div id="library">
+
+			<div id="create-food" class="row">
+				<h1>Add food</h1>
+
+				<div id="food-name-container" class="large-3 medium-4 small-12 columns">
+					<label for="food-name">Food Name: </label><input type="text" id="food-name">
+				</div>
+				<div id="quantity-metric-container" class="large-3 medium-4 small-12 columns">
+					<div id="quantity-metric">
+						<label for="metric">Quantity Metric: </label>
+						<select id="metric">
+							<option></option>
+							<option>Grams</option>
+							<option>Packs</option>
+							<option>Singles</option>	
+						</select>
+					</div>
+				</div>
+
+				<div id="food-quantity-container" class="large-3 medium-4 small-12 columns">
+					<label id="food-quantity-label" for="food-quantity">Food Quantity: </label>
+					<select id="food-quantity" disabled="disabled"></select>
+				</div>
+
+				<button id="add" class="large-3 medium-4 small-12 columns">Add</button>
+			</div>
+
+			<div id="listing" class="row"></div>
+
+		</div>
+
+
+
+
+		<script type="text/template" id="new-food">
+			<div>
+				<div>
+					<p>Food Item: <%= name %></p>
+				</div>
+				<div>
+					<p class="quantity">Quantity: <%= quantity %> <%= metric %></p>
+				</div>
+				<p>
+				<label for="quantity-update">Update quantity:</label>
+				<% if(metric == "Grams") { %>
+					<input type="text" id="quantity-update">
+				<% } else { %>
+				<select>
+
+					<option></option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+				</select>
+				<% } %>
+				</p>
+				
+				<button id="delete">Delete</button>
+
+			</div>
+		</script>
+
+		<script type="text/javascript" src="js/models/food.js"></script>
+		<script type="text/javascript" src="js/collections/store.js"></script>
+		<script type="text/javascript" src="js/views/food.js"></script>
+		<script type="text/javascript" src="js/views/foodstore.js"></script>
+
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	    <script src="bower_components/foundation/js/foundation.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+
+		
+	</body>
+
+</html>

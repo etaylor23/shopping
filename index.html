@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Stock Take</title>
+
+		<link rel="stylesheet" href="css/app.css" />
+
+
+	    <script src="bower_components/modernizr/modernizr.js"></script>
+
+
+
+	
+	</head>
+
+	<body>
+
+
+	<div class="nav-controls">
+		<div class="my-stocktake">
+    		<a href="/my-stock-take">My Stocktake</a>
+    	</div>
+    	<div>
+    		<a href="/logout">Logout</a>
+    	</div>
+	</div>
+
+    <div class="row">
+    	<div class="large-12 medium-12 small-12 columns">
+			<div id="intro">
+				<h1>Stock Take</h1>
+				<p>Welcome to your personal stock take system. </p>
+				<p>This was originally developed for my own personal use to keep track of what food I have in my house, how much and when I'm about to run out.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-6 medium-6 small-12 columns">
+			<h2>Login</h2>
+			<form action="/login" method="post">
+		      <div>
+		        <label>Username:</label>
+		        <input type="text" name="username" />
+		      </div>
+		      <div>
+		        <label>Password:</label>
+		        <input type="password" name="password" />
+		      </div>
+		      <div>
+		        <input class="button" type="submit" value="Submit" />
+		      </div>
+		    </form>
+		</div>
+    	<div class="large-6 medium-6 small-12 columns">
+    		<h2>Sign up</h2>
+			<form action="/create-user" method="post">
+				<div>
+					<label>Username:</label>
+					<input type="text" name="username" />
+				</div>
+				<div>
+					<label>Password:</label>
+					<input type="password" name="password" />
+				</div>
+				<div>
+					<label>Verify Password:</label>
+					<input type="password" name="verifypassword" />
+				</div>
+				<div>
+					<input class="button" type="submit" value="Submit" />
+				</div>
+			</form>
+    	</div>
+    </div>
+
+
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	    <script src="bower_components/foundation/js/foundation.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,65 @@
+@import "settings";
+@import "foundation";
+
+body { background: url("backgrounds/15.jpg") !important; }
+
+.red { border:3px solid red; }
+.orange { border:3px solid orange; }
+.green { border:3px solid green; }
+
+
+#library {
+	#create-food { margin-bottom:30px; }
+}
+
+.nav-controls { z-index:999; position:fixed; top:220px; padding-left:30px; padding-top:30px; padding-bottom:30px; padding-right:30px; background-color: rgba(0, 0, 255, 0.4); transition: background-color 300ms ease-out 0s;
+	.my-stocktake { margin-bottom:40px; }
+	a { color:white; }
+}
+
+.nav-controls:hover { background-color: rgba(0, 0, 255, 1); }
+
+@media only screen and (max-width: 40em) {
+	.nav-controls { position:relative; width:100%; top:0;}
+}
+
+
+
+
+// Or selectively include components
+// @import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+//   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+//   "foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switch",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+//   "foundation/components/top-bar",
+//   "foundation/components/type",
+//   "foundation/components/offcanvas",
+//   "foundation/components/visibility";
